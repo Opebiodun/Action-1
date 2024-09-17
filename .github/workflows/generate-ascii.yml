@@ -9,15 +9,11 @@ jobs:
         - name: checkout repo
           uses: actions/checkout@v4 
           
-        - name: List and Read files 
-          run: |
-            echo "My first Guthub Actions Job"
-            ls -al
-            cat README.md 
-
-        - name: Executing Shell Script
-          run: |
-            chmod +x ascii-script.sh 
-            ./ascii-script.sh
-
-       
+        - name: Make script executable
+          run: chmod +x ascii-script.sh
+        
+        - name: List files in the working directory
+          run: ls -l
+  
+        - name: Run ASCII script
+          run: ./ascii-script.sh
