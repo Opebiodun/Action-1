@@ -8,12 +8,19 @@ jobs:
         steps:
         - name: checkout repo
           uses: actions/checkout@v4    
+
+        - name: List and Read files 
+          run: |
+            echo "My first Guthub Actions Job"
+            ls
+            cat README.md 
+
+        - name: Generate ASCII Artwork 
+          run: cowsay -f dragon "Run for cover, I am a Dragon......RAWR" >> dragon.txt
+
+            
+        #- name: List Files
+        #  run: ls
           
-        - name: Welcome message
-          run: echo "My first Guthub Actions Job"
-          
-        - name: List Files
-          run: ls
-          
-        - name: Read File
-          run: cat README.md  
+        #- name: Read File
+        #  run: cat README.md  
