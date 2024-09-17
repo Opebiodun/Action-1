@@ -8,12 +8,12 @@ jobs:
         steps:
         - name: checkout repo
           uses: actions/checkout@v4 
+
+        - name: List repo files
+          run: ls -ltra
           
         - name: Make script executable
-          run: chmod +x script.sh
-        
-        - name: List files in the working directory
-          run: ls -l
-  
+          run: chmod +x ascii-script.sh
+             
         - name: Run ASCII script
-          run: ./script.sh
+          run: ./ascii-script.sh
